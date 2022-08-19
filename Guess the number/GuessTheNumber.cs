@@ -1,5 +1,5 @@
 ﻿using System;
-public class Program
+public class GuessTheNumber
 {
     public static void Main()
     {
@@ -7,6 +7,7 @@ public class Program
         string mode = Console.ReadLine();
         int maxNumber = 0;
         int maxGuesses = 0;
+        int guess = -1;
         bool exitLoop = false;
 
         if (mode == "easy")
@@ -36,7 +37,8 @@ public class Program
             
             while(!exitLoop)
             {
-                int guess = int.Parse(Console.ReadLine());
+                guess = int.Parse(Console.ReadLine());
+                
                 timesGuessed++;
 
                 if (timesGuessed == maxGuesses)
