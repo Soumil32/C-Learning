@@ -1,0 +1,15 @@
+C:\Users\soumi\Documents\GitHub\C-Learning\Personal Information Store\Personal Information\bin\Release\net6.0\Personal Information.exe
+C:\Users\soumi\Documents\GitHub\C-Learning\Personal Information Store\Personal Information\bin\Release\net6.0\Personal Information.deps.json
+C:\Users\soumi\Documents\GitHub\C-Learning\Personal Information Store\Personal Information\bin\Release\net6.0\Personal Information.runtimeconfig.json
+C:\Users\soumi\Documents\GitHub\C-Learning\Personal Information Store\Personal Information\bin\Release\net6.0\Personal Information.dll
+C:\Users\soumi\Documents\GitHub\C-Learning\Personal Information Store\Personal Information\bin\Release\net6.0\Personal Information.pdb
+C:\Users\soumi\Documents\GitHub\C-Learning\Personal Information Store\Personal Information\obj\Release\net6.0\Personal Information.csproj.AssemblyReference.cache
+C:\Users\soumi\Documents\GitHub\C-Learning\Personal Information Store\Personal Information\obj\Release\net6.0\Personal Information.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\soumi\Documents\GitHub\C-Learning\Personal Information Store\Personal Information\obj\Release\net6.0\Personal Information.AssemblyInfoInputs.cache
+C:\Users\soumi\Documents\GitHub\C-Learning\Personal Information Store\Personal Information\obj\Release\net6.0\Personal Information.AssemblyInfo.cs
+C:\Users\soumi\Documents\GitHub\C-Learning\Personal Information Store\Personal Information\obj\Release\net6.0\Personal Information.csproj.CoreCompileInputs.cache
+C:\Users\soumi\Documents\GitHub\C-Learning\Personal Information Store\Personal Information\obj\Release\net6.0\Personal Information.dll
+C:\Users\soumi\Documents\GitHub\C-Learning\Personal Information Store\Personal Information\obj\Release\net6.0\refint\Personal Information.dll
+C:\Users\soumi\Documents\GitHub\C-Learning\Personal Information Store\Personal Information\obj\Release\net6.0\Personal Information.pdb
+C:\Users\soumi\Documents\GitHub\C-Learning\Personal Information Store\Personal Information\obj\Release\net6.0\Personal Information.genruntimeconfig.cache
+C:\Users\soumi\Documents\GitHub\C-Learning\Personal Information Store\Personal Information\obj\Release\net6.0\ref\Personal Information.dll
