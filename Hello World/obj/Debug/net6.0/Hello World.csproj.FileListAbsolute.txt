@@ -1,0 +1,15 @@
+C:\Users\soumi\Documents\GitHub\C-Learning\Hello World\bin\Debug\net6.0\Hello World.exe
+C:\Users\soumi\Documents\GitHub\C-Learning\Hello World\bin\Debug\net6.0\Hello World.deps.json
+C:\Users\soumi\Documents\GitHub\C-Learning\Hello World\bin\Debug\net6.0\Hello World.runtimeconfig.json
+C:\Users\soumi\Documents\GitHub\C-Learning\Hello World\bin\Debug\net6.0\Hello World.dll
+C:\Users\soumi\Documents\GitHub\C-Learning\Hello World\bin\Debug\net6.0\Hello World.pdb
+C:\Users\soumi\Documents\GitHub\C-Learning\Hello World\obj\Debug\net6.0\Hello World.csproj.AssemblyReference.cache
+C:\Users\soumi\Documents\GitHub\C-Learning\Hello World\obj\Debug\net6.0\Hello World.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\soumi\Documents\GitHub\C-Learning\Hello World\obj\Debug\net6.0\Hello World.AssemblyInfoInputs.cache
+C:\Users\soumi\Documents\GitHub\C-Learning\Hello World\obj\Debug\net6.0\Hello World.AssemblyInfo.cs
+C:\Users\soumi\Documents\GitHub\C-Learning\Hello World\obj\Debug\net6.0\Hello World.csproj.CoreCompileInputs.cache
+C:\Users\soumi\Documents\GitHub\C-Learning\Hello World\obj\Debug\net6.0\Hello World.dll
+C:\Users\soumi\Documents\GitHub\C-Learning\Hello World\obj\Debug\net6.0\refint\Hello World.dll
+C:\Users\soumi\Documents\GitHub\C-Learning\Hello World\obj\Debug\net6.0\Hello World.pdb
+C:\Users\soumi\Documents\GitHub\C-Learning\Hello World\obj\Debug\net6.0\Hello World.genruntimeconfig.cache
+C:\Users\soumi\Documents\GitHub\C-Learning\Hello World\obj\Debug\net6.0\ref\Hello World.dll
