@@ -38,8 +38,6 @@ public class GuessTheNumber
             while(!exitLoop)
             {
                 guess = int.Parse(Console.ReadLine());
-                
-                timesGuessed++;
 
                 if (timesGuessed == maxGuesses)
                 {
@@ -50,7 +48,8 @@ public class GuessTheNumber
                 {
                     Console.WriteLine("You guessed the number!");
                     exitLoop = true;
-                }
+                } 
+                timesGuessed++;
             }
         }
     }
