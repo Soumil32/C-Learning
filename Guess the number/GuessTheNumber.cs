@@ -1,6 +1,11 @@
 ﻿using System;
 public class GuessTheNumber
 {
+public static bool ContainsCaseInsensitive(this string source, string substring)
+    {
+        return source?.IndexOf(substring, StringComparison.OrdinalIgnoreCase) > -1;
+    }
+
     public static void Main()
     {
         Console.WriteLine("Choose a mode: easy, medium, or hard");
@@ -10,17 +15,17 @@ public class GuessTheNumber
         int guess = -1;
         bool exitLoop = false;
 
-        if (mode == "easy")
+        if (mode.ContainsCaseInsensitive("easy")))
         {
             maxNumber = 11;
             maxGuesses = 3;
         }
-        else if (mode == "medium")
+        else if (mode.ContainsCaseInsensitive("medium")))
         {
             maxNumber = 31;
             maxGuesses = 6;
         }
-        else if (mode == "hard")
+        else if (mode.ContainsCaseInsensitive("hard")))
         {
             maxNumber = 51;
             maxGuesses = 8;
