@@ -37,14 +37,17 @@ public class GuessTheNumber
             
             while(!exitLoop)
             {
-                guess = int.Parse(Console.ReadLine());
+                
 
                 if (timesGuessed == maxGuesses)
                 {
                     Console.WriteLine("You lost. The number was " + numberToGuess);
                     exitLoop = true;
-                }
-                else if (guess == numberToGuess)
+                }else
+{
+    guess = int.Parse(Console.ReadLine());
+} 
+                if (guess == numberToGuess)
                 {
                     Console.WriteLine("You guessed the number!");
                     exitLoop = true;
