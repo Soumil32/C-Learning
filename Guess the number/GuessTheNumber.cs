@@ -10,7 +10,6 @@ public class GuessTheNumber
         int maxNumber = 0;
         int maxGuesses = 0;
         int guess = -1;
-        bool exitLoop = false;
 
         if (mode.ContainsCaseInsensitive("easy"))
         {
@@ -30,21 +29,20 @@ public class GuessTheNumber
 
         while (true)
         {
-            exitLoop = false;
             int timesGuessed = 0;
             Random random = new Random();
             int numberToGuess = random.Next(0, maxNumber);
 
             Console.WriteLine("Guess a number between 0 and " + (maxNumber - 1));
 
-            while (!exitLoop)
+            while (true)
             {
 
 
                 if (timesGuessed == maxGuesses)
                 {
                     Console.WriteLine("You lost. The number was " + numberToGuess);
-                    exitLoop = true;
+                    break;
                 }
                 else
                 {
@@ -53,7 +51,7 @@ public class GuessTheNumber
                 if (guess == numberToGuess)
                 {
                     Console.WriteLine("You guessed the number!");
-                    exitLoop = true;
+                    break;
                 }
                 timesGuessed++;
             }
