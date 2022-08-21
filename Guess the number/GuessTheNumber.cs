@@ -35,7 +35,7 @@ public class GuessTheNumber
 
             Console.WriteLine("Guess a number between 0 and " + (maxNumber - 1));
 
-            while (true)
+            while(true)
             {
 
 
