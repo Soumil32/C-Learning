@@ -2,12 +2,10 @@
 *.v2
 *.vsidx
 *.vsidx
-Guess the number/.vs/Guess the number/FileContentIndex/218256fe-7bc0-42c9-b9e0-ee15c4b5b8fd.vsidx
-Guess the number/.vs/Guess the number/v17/.suo
 *.1
-
 *.lock
-Guess the number/bin/Debug/net6.0/Guess the number.dll
-Guess the number/bin/Debug/net6.0/Guess the number.pdb
-Guess the number/obj/Debug/net6.0/Guess the number.dll
-Guess the number/obj/Debug/net6.0/Guess the number.pdb
+Guess the number/.vs/
+Guess the number/bin/
+Guess the number/obj/
+Higher or lower/bin/
+Higher or lower/obj/
