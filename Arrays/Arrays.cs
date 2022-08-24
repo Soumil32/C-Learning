@@ -16,10 +16,10 @@ namespace Arrays
 			numbers[3] = 12;
 			numbers[4] = 2;
 
-            // Here we don't specify how many numbers you want.
+			// Here we don't specify how many numbers you want.
 			// Instead, the compiler just uses how many numbers you typed.
 			// It also looks alot cleaner.
-            int[] numbers2 = new int[] {8, 64, 21, 12, 2};
+			int[] numbers2 = new int[] {8, 64, 21, 12, 2};
 
 			// Here is the same concept with strings
 			string[] names = new string[] {"Emily", "David", "Edward", "Ryan", "Ronald"};
@@ -37,8 +37,8 @@ namespace Arrays
 			}
 
 			Console.WriteLine(("Soumil32").ReverseString());
-        }
+		}
 
 		
-    }
+	}
 }
