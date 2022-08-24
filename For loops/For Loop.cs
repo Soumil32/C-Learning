@@ -2,7 +2,7 @@
 
 namespace ForLoops
 {
-	class Program
+	class ForLoop
 	{
 		static void Main(string[] args)
 		{
