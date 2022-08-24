@@ -35,14 +35,19 @@ namespace Arrays
 				Console.WriteLine(name);
 			}
 
-			
+			Console.WriteLine(("Soumil32").ReverseString());
         }
 
-		static private string ReverseString(string stringToReverse)
-		{
+		
+    }
+
+	public static class StringExtensions
+	{
+        static public string ReverseString(this string stringToReverse)
+        {
             char[] stringToReverseCharArray = stringToReverse.ToCharArray();
             Array.Reverse(stringToReverseCharArray);
-			return stringToReverseCharArray.ToString();
+            return new string(stringToReverseCharArray);
         }
     }
 }
