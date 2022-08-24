@@ -19,6 +19,15 @@ namespace Arrays
 			// Instead, the compiler just uses how many numbers you typed.
 			// It also looks alot cleaner.
             int[] numbers2 = new int[] {8, 64, 21, 12, 2};
+
+			// Here is the same concept with strings
+			string[] names = new string[] {"Emily", "David", "Edward", "Ryan", "Ronald"};
+
+			// This for loop prints out all the vaules in "names"
+			for (int i = 0; i < names.Length; i++)
+			{
+				Console.WriteLine(names[i]);
+			}
         }
     }
 }
