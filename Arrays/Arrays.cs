@@ -34,6 +34,15 @@ namespace Arrays
 			{
 				Console.WriteLine(name);
 			}
+
+			
+        }
+
+		static private string ReverseString(string stringToReverse)
+		{
+            char[] stringToReverseCharArray = stringToReverse.ToCharArray();
+            Array.Reverse(stringToReverseCharArray);
+			return stringToReverseCharArray.ToString();
         }
     }
 }
