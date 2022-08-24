@@ -1,4 +1,5 @@
 ﻿using System;
+using MoreTypeExtensions;
 
 namespace Arrays
 {
@@ -39,15 +40,5 @@ namespace Arrays
         }
 
 		
-    }
-
-	public static class StringExtensions
-	{
-        static public string ReverseString(this string stringToReverse)
-        {
-            char[] stringToReverseCharArray = stringToReverse.ToCharArray();
-            Array.Reverse(stringToReverseCharArray);
-            return new string(stringToReverseCharArray);
-        }
     }
 }
