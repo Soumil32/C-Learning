@@ -11,6 +11,7 @@ namespace ForLoops
                 if(i == 7)
                 {
                     Console.WriteLine("I found seven");
+                    break;
                 }
             }
         }
