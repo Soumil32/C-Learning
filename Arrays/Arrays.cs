@@ -24,9 +24,15 @@ namespace Arrays
 			string[] names = new string[] {"Emily", "David", "Edward", "Ryan", "Ronald"};
 
 			// This for loop prints out all the vaules in "names"
-			for (int i = 0; i < names.Length; i++)
+			for (int name = 0; name < names.Length; name++)
 			{
-				Console.WriteLine(names[i]);
+				Console.WriteLine(names[name]);
+			}
+
+			// A foreach does the same thing as the above for loop
+			foreach (string name in names)
+			{
+				Console.WriteLine(name);
 			}
         }
     }
