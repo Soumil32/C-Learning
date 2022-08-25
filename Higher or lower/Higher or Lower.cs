@@ -1,4 +1,5 @@
 ﻿using System;
+using MoreTypeExtensions;
 public class HigherOrLower
 {
 
@@ -60,13 +61,5 @@ public class HigherOrLower
                 timesGuessed++;
             }
         }
-    }
-}
-
-public static class StringExtensions
-{
-    public static bool ContainsCaseInsensitive(this string source, string substring)
-    {
-        return source?.IndexOf(substring, StringComparison.OrdinalIgnoreCase) > -1;
     }
 }
