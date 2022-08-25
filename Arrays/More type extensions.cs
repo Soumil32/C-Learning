@@ -25,9 +25,6 @@ namespace MoreTypeExtensions
 
     public static class IntExtensions
     {
-        public static string ConvertToString(this int intToConvert)
-        {
-            return new string(intToConvert);
-        }
+
     }
 }

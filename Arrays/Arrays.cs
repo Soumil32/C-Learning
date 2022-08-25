@@ -35,10 +35,7 @@ namespace Arrays
 			{
 				Console.WriteLine(name);
 			}
-
 			Console.WriteLine(("Soumil32").ReverseString());
 		}
-
-		
 	}
 }
