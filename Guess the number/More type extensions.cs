@@ -14,4 +14,20 @@ namespace MoreTypeExtensions
             return source?.IndexOf(substring, StringComparison.OrdinalIgnoreCase) > -1;
         }
     }
+
+    public static class CharExtensions
+    {
+        public static string ConvertToString(this char[] charToConvert)
+        {
+            return new string(charToConvert);
+        }
+    }
+
+    public static class IntExtensions
+    {
+        public static string ConvertToString(this int intToConvert)
+        {
+            return new string(intToConvert);
+        }
+    }
 }
