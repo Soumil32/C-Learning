@@ -12,8 +12,8 @@ namespace Arrays
 			// You can access a specific value from an array using its index.
 			numbers[0] = 8;
 			numbers[1] = 64;
-			numbers[2] = 21;
-			numbers[3] = 12;
+			numbers[2] = 12;
+			numbers[3] = 21;
 			numbers[4] = 2;
 
 			// Here we don't specify how many numbers you want.
@@ -35,7 +35,6 @@ namespace Arrays
 			{
 				Console.WriteLine(name);
 			}
-			Console.WriteLine(("Soumil32").ReverseString());
 		}
 	}
 }
