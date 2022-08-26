@@ -19,6 +19,10 @@
 			string myMoney = string.Format("{0:C}", 54);
 			// Putting ':N' formats the number with commas and decimals
 			string numberFormated = string.Format("{0:N}", 738743843843463);
+			// Use ':P' To display a number as a percentage
+			string percentage = string.Format("{0} as a percentage: {0:P}", 0.36);
+			// Use ':#' to display phone numbers. Each '#' with be replaced with phone digit.
+			string phoneNumber = string.Format("Phone number: {0:(+##) ####-###-###}", 447423451894);
 
 			Console.WriteLine(qoutations);
 			Console.WriteLine(seperateLines);
@@ -27,6 +31,8 @@
 			Console.WriteLine(formatted);
 			Console.WriteLine(myMoney);
 			Console.WriteLine(numberFormated);
+			Console.WriteLine(percentage);
+			Console.WriteLine(phoneNumber);
 			Console.ReadLine();
 		}
 	}
