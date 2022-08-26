@@ -1,4 +1,6 @@
-﻿namespace Strings
+﻿using System.Text;
+
+namespace Strings
 {
 	class Strings
 	{
@@ -48,6 +50,13 @@
 			songLyric = songLyric.Remove(0, 5);
 			Console.WriteLine(songLyric);
 
+			StringBuilder myString = new StringBuilder();
+
+			for (int i = 0; i < 100; i++)
+			{
+				myString.Append("--");
+			}
+			Console.WriteLine(myString);
 			Console.ReadLine();
 		}
 	}
