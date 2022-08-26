@@ -2,7 +2,7 @@
 {
 	class Methods
 	{
-
+		
 		/* 
 		This is a simple method that writes 'Hello World' to the console.
 		With methods you can write code once and use it again easily.
@@ -17,10 +17,10 @@
 			Console.WriteLine("Hello World");
 		}
 
-        static void Main(string[] args)
-        {
+		static void Main(string[] args)
+		{
 			// To call a function you just type its name followed by a pair of parathensis
 			HelloWorld();
-        }
-    }
+		} 
+	}
 }

@@ -38,7 +38,7 @@ namespace MoreTypeExtensions
 				}
 				previousint = number;
 			}
-            return null;
-        }
+			return null;
+		}
 	}
 }
