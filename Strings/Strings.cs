@@ -23,6 +23,11 @@
 			string percentage = string.Format("{0} as a percentage: {0:P}", 0.36);
 			// Use ':#' to display phone numbers. Each '#' with be replaced with phone digit.
 			string phoneNumber = string.Format("Phone number: {0:(+##) ####-###-###}", 447423451894);
+			// Use Substring to get a part of a string.
+			// The firt number is the start character and the second number is the end character.
+			// Leave it black to go to the end of the string.
+			string songLyric = "I am at my all time low";
+			songLyric = songLyric.Substring(8);
 
 			Console.WriteLine(qoutations);
 			Console.WriteLine(seperateLines);
@@ -33,6 +38,7 @@
 			Console.WriteLine(numberFormated);
 			Console.WriteLine(percentage);
 			Console.WriteLine(phoneNumber);
+			Console.WriteLine(songLyric);
 			Console.ReadLine();
 		}
 	}
