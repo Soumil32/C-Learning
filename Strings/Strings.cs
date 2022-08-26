@@ -44,6 +44,9 @@
 			// Replace() replaces the first value with the second value.
 			songLyric = songLyric.Replace("MY", "your");
 			Console.WriteLine(songLyric);
+			// Remove() removes all characters between the 1st number and 2nd number
+			songLyric = songLyric.Remove(0, 5);
+			Console.WriteLine(songLyric);
 
 			Console.ReadLine();
 		}
