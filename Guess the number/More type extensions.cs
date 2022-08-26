@@ -13,6 +13,11 @@ namespace MoreTypeExtensions
 		{
 			return source?.IndexOf(substring, StringComparison.OrdinalIgnoreCase) > -1;
 		}
+
+		public static int ParseString(this string stringToParse)
+		{
+			return int.Parse(stringToParse);
+		}
 	}
 
 	public static class CharExtensions
