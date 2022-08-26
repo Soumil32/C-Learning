@@ -6,7 +6,7 @@ namespace MoreTypeExtensions
 		{
 			char[] stringToReverseCharArray = stringToReverse.ToCharArray();
 			Array.Reverse(stringToReverseCharArray);
-			return new string(stringToReverseCharArray);
+			return String.Concat(stringToReverseCharArray);
 		}
 
 		public static bool ContainsCaseInsensitive(this string source, string substring)
