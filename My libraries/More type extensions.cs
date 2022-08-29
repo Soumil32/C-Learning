@@ -2,7 +2,7 @@ namespace MoreTypeExtensions
 {
 	public static class StringExtensions
 	{
-		static public string ReverseString(this string stringToReverse)
+		public static string ReverseString(this string stringToReverse)
 		{
 			char[] stringToReverseCharArray = stringToReverse.ToCharArray();
 			Array.Reverse(stringToReverseCharArray);
