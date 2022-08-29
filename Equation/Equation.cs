@@ -6,15 +6,15 @@
         {
             //x + 3x = 56
             // x + 3x = x + 45
-            int x = int.MinValue;
+            decimal x = int.MinValue;
 
-            while (x + (x * 3)!= x + 45)
+            while (x != 0)
             {
-                x ++;
-                
+                x += 0.1M;
             }
 
             Console.WriteLine(x);
+            // ReSharper disable once StringLiteralTypo
             File.WriteAllText(@"C:\Users\soumi\Documents\GitHub\C-Learning\Equation\Answer.txt", x.ToString());
         }
     }
