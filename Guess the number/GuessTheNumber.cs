@@ -16,20 +16,20 @@ public class GuessTheNumber
 		Console.WriteLine("What game would would you like to play?");
 		Console.WriteLine("1) Guess the number");
 		Console.WriteLine("2) Higher or lower");
-		string? response;
+		string? gameMode;
 		do
 		{
 			do
 			{
 				Console.WriteLine("Please enter the number or name");
-				response = Console.ReadLine();
-			} while (response == null);
+				gameMode = Console.ReadLine();
+			} while (gameMode == null);
 
-			SetMode(response);
-		} while (!SetMode(response));
+			SetGame(gameMode);
+		} while (!SetGame(gameMode));
 	}
 
-	private static bool SetMode(string response)
+	private static bool SetGame(string response)
 	{
 		if (response.ContainsCaseInsensitive("1") || response.ContainsCaseInsensitive("Guess the number"))
 		{
