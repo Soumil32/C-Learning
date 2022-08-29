@@ -9,7 +9,7 @@ namespace MoreTypeExtensions
 			return String.Concat(stringToReverseCharArray);
 		}
 
-		public static bool ContainsCaseInsensitive(this string source, string substring)
+		public static bool IgnoreCaseContains(this string source, string substring)
 		{
 			return source?.IndexOf(substring, StringComparison.OrdinalIgnoreCase) > -1;
 		}
