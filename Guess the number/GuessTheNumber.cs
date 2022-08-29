@@ -13,15 +13,35 @@ public class GuessTheNumber
 
 	private static void Menu()
 	{
-		Console.WriteLine("What game would would you like to play? Please enter the number or name");
+		Console.WriteLine("What game would would you like to play?");
 		Console.WriteLine("1) Guess the number");
 		Console.WriteLine("2) Higher or lower");
-		string response = Console.ReadLine();
+		string? response;
+		do
+		{
+			do
+			{
+				Console.WriteLine("Please enter the number or name");
+				response = Console.ReadLine();
+			} while (response == null);
 
+			SetMode(response);
+		} while (!SetMode(response));
+	}
+
+	private static bool SetMode(string response)
+	{
 		if (response.ContainsCaseInsensitive("1") || response.ContainsCaseInsensitive("Guess the number"))
+		{
 			PlayGuessTheNumber();
+			return true;
+		}
 		else if (response.ContainsCaseInsensitive("2") || response.ContainsCaseInsensitive("Higher or lower"))
+		{
 			PlayHigherOrLower();
+			return true;
+		}
+		return false;
 	}
 
 	private static void PlayGuessTheNumber()
