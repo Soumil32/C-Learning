@@ -1,3 +1,4 @@
+// ReSharper disable once CheckNamespace
 namespace MoreTypeExtensions
 {
 	public static class StringExtensions

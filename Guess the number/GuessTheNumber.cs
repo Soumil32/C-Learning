@@ -1,14 +1,15 @@
-﻿using System;
-using MoreTypeExtensions;
+﻿using MoreTypeExtensions;
 
 // ReSharper disable once CheckNamespace
 namespace GuessTheNumber
+	// ReSharper disable once ArrangeNamespaceBody
 {
+	// ReSharper disable once ClassNeverInstantiated.Global
 	public class GuessTheNumber
 	{
-		static int maxNumber;
-		static int maxGuesses;
-		static int guess;
+		private static int maxNumber;
+		private static int maxGuesses;
+		private static int guess;
 
 		private static void Main()
 		{
@@ -35,14 +36,17 @@ namespace GuessTheNumber
 			Console.Clear();
 		}
 
-		private static bool SetGame(string response)
+		private static bool SetGame(string? response)
 		{
+#pragma warning disable CS8604
 			if (response.IgnoreCaseContains("1") || response.IgnoreCaseContains("Guess the number"))
+#pragma warning restore CS8604
 			{
 				PlayGuessTheNumber();
 				return true;
 			}
-			else if (response.IgnoreCaseContains("2") || response.IgnoreCaseContains("Higher or lower"))
+			// ReSharper disable once InvertIf
+			if (response.IgnoreCaseContains("2") || response.IgnoreCaseContains("Higher or lower"))
 			{
 				PlayHigherOrLower();
 				return true;
@@ -59,8 +63,7 @@ namespace GuessTheNumber
 			while (true)
 			{
 				int timesGuessed = 0;
-				Random random = new Random();
-				int numberToGuess = random.Next(0, maxNumber);
+				int numberToGuess = GenerateRandomNumber();
 
 				Console.WriteLine("Guess a number between 0 and " + (maxNumber - 1));
 
@@ -73,11 +76,9 @@ namespace GuessTheNumber
 						Console.WriteLine("You lost. The number was " + numberToGuess);
 						break;
 					}
-					else
-					{
+#pragma warning disable CS8604
 						guess = int.Parse(Console.ReadLine());
-					}
-
+#pragma warning restore CS8604
 					if (guess == numberToGuess)
 					{
 						Console.WriteLine("You guessed the number!");
@@ -87,6 +88,7 @@ namespace GuessTheNumber
 					timesGuessed++;
 				}
 			}
+			// ReSharper disable once FunctionNeverReturns
 		}
 
 		private static void PlayHigherOrLower()
@@ -108,8 +110,9 @@ namespace GuessTheNumber
 						Console.WriteLine("You lost. The number was " + numberToGuess);
 						break;
 					}
-					else
-						guess = int.Parse(Console.ReadLine());
+#pragma warning disable CS8604
+					guess = int.Parse(Console.ReadLine());
+#pragma warning restore CS8604
 
 					if (guess == numberToGuess)
 					{
@@ -125,11 +128,12 @@ namespace GuessTheNumber
 					timesGuessed++;
 				}
 			}
+			// ReSharper disable once FunctionNeverReturns
 		}
 
 		private static int GenerateRandomNumber()
 		{
-			Random random = new Random();
+			Random random = new();
 			int numberToGuess = random.Next(0, maxNumber);
 			return numberToGuess;
 		}
@@ -151,7 +155,9 @@ namespace GuessTheNumber
 			maxGuesses = 0;
 			guess = -1;
 
+#pragma warning disable CS8604
 			if (mode.IgnoreCaseContains("easy"))
+#pragma warning restore CS8604
 			{
 				maxNumber = 11;
 				maxGuesses = 3;
@@ -168,11 +174,14 @@ namespace GuessTheNumber
 			}
 		}
 
-		private static bool CheckEnteredModeIsCorrect(string mode)
+		private static bool CheckEnteredModeIsCorrect(string? mode)
 		{
 			if (mode == "")
 				return false;
+			// ReSharper disable once ConvertIfStatementToReturnStatement
+#pragma warning disable CS8604
 			if (!mode.IgnoreCaseContains("easy") && !mode.IgnoreCaseContains("medium") && !mode.IgnoreCaseContains("hard"))
+#pragma warning restore CS8604
 				return false;
 
 			return true;
