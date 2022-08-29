@@ -1,145 +1,181 @@
 ﻿using System;
 using MoreTypeExtensions;
 
-public class GuessTheNumber
+// ReSharper disable once CheckNamespace
+namespace GuessTheNumber
 {
-	static int maxNumber = 0;
-	static int maxGuesses = 0;
-	static int guess = -1;
-	private static void Main()
+	public class GuessTheNumber
 	{
-		Menu();
-	}
+		static int maxNumber;
+		static int maxGuesses;
+		static int guess;
 
-	private static void Menu()
-	{
-		Console.WriteLine("What game would would you like to play?");
-		Console.WriteLine("1) Guess the number");
-		Console.WriteLine("2) Higher or lower");
-		string? gameMode;
-		do
+		private static void Main()
 		{
+			Menu();
+		}
+
+		private static void Menu()
+		{
+			Console.WriteLine("What game would would you like to play?");
+			Console.WriteLine("1) Guess the number");
+			Console.WriteLine("2) Higher or lower");
+			string? gameMode;
 			do
 			{
-				Console.WriteLine("Please enter the number or name");
-				gameMode = Console.ReadLine();
-			} while (gameMode == null);
+				do
+				{
+					Console.WriteLine("Please enter the number or name");
+					gameMode = Console.ReadLine();
+				} while (gameMode == "");
 
-			SetGame(gameMode);
-		} while (!SetGame(gameMode));
-	}
+				SetGame(gameMode);
+			} while (!SetGame(gameMode));
 
-	private static bool SetGame(string response)
-	{
-		if (response.ContainsCaseInsensitive("1") || response.ContainsCaseInsensitive("Guess the number"))
-		{
-			PlayGuessTheNumber();
-			return true;
+			Console.Clear();
 		}
-		else if (response.ContainsCaseInsensitive("2") || response.ContainsCaseInsensitive("Higher or lower"))
+
+		private static bool SetGame(string response)
 		{
-			PlayHigherOrLower();
-			return true;
+			if (response.IgnoreCaseContains("1") || response.IgnoreCaseContains("Guess the number"))
+			{
+				PlayGuessTheNumber();
+				return true;
+			}
+			else if (response.IgnoreCaseContains("2") || response.IgnoreCaseContains("Higher or lower"))
+			{
+				PlayHigherOrLower();
+				return true;
+			}
+
+			return false;
 		}
-		return false;
-	}
 
-	private static void PlayGuessTheNumber()
-	{
-		Console.WriteLine("You are playing Guess the number");
-		GetMode();
-
-		while (true)
+		private static void PlayGuessTheNumber()
 		{
-			int timesGuessed = 0;
-			Random random = new Random();
-			int numberToGuess = random.Next(0, maxNumber);
-
-			Console.WriteLine("Guess a number between 0 and " + (maxNumber - 1));
+			Console.WriteLine("You are playing Guess the number");
+			SetMode();
 
 			while (true)
 			{
+				int timesGuessed = 0;
+				Random random = new Random();
+				int numberToGuess = random.Next(0, maxNumber);
+
+				Console.WriteLine("Guess a number between 0 and " + (maxNumber - 1));
+
+				while (true)
+				{
 
 
-				if (timesGuessed == maxGuesses)
-				{
-					Console.WriteLine("You lost. The number was " + numberToGuess);
-					break;
+					if (timesGuessed == maxGuesses)
+					{
+						Console.WriteLine("You lost. The number was " + numberToGuess);
+						break;
+					}
+					else
+					{
+						guess = int.Parse(Console.ReadLine());
+					}
+
+					if (guess == numberToGuess)
+					{
+						Console.WriteLine("You guessed the number!");
+						break;
+					}
+
+					timesGuessed++;
 				}
-				else
-				{
-					guess = int.Parse(Console.ReadLine());
-				}
-				if (guess == numberToGuess)
-				{
-					Console.WriteLine("You guessed the number!");
-					break;
-				}
-				timesGuessed++;
 			}
 		}
-	}
 
-	private static void PlayHigherOrLower()
-	{
-		Console.WriteLine("You are playing higher or lower");
-		GetMode();
-
-		while (true)
+		private static void PlayHigherOrLower()
 		{
-			int timesGuessed = 0;
-			Random random = new Random();
-			int numberToGuess = random.Next(0, maxNumber);
-
-			Console.WriteLine("Guess a number between 0 and " + (maxNumber - 1));
+			Console.WriteLine("You are playing higher or lower");
+			SetMode();
 
 			while (true)
 			{
-				if (timesGuessed == maxGuesses)
-				{
-					Console.WriteLine("You lost. The number was " + numberToGuess);
-					break;
-				}
-				else
-					guess = int.Parse(Console.ReadLine());
+				int timesGuessed = 0;
+				int numberToGuess = GenerateRandomNumber();
 
-				if (guess == numberToGuess)
-				{
-					Console.WriteLine("You guessed the number!");
-					break;
-				}
-				else if (guess < numberToGuess)
-					Console.WriteLine("Too low");
-				else if (guess > numberToGuess)
-					Console.WriteLine("Too high");
+				Console.WriteLine("Guess a number between 0 and " + (maxNumber - 1));
 
-				timesGuessed++;
+				while (true)
+				{
+					if (timesGuessed == maxGuesses)
+					{
+						Console.WriteLine("You lost. The number was " + numberToGuess);
+						break;
+					}
+					else
+						guess = int.Parse(Console.ReadLine());
+
+					if (guess == numberToGuess)
+					{
+						Console.WriteLine("You guessed the number!");
+						break;
+					}
+
+					if (guess < numberToGuess)
+						Console.WriteLine("Too low");
+					else if (guess > numberToGuess)
+						Console.WriteLine("Too high");
+
+					timesGuessed++;
+				}
 			}
 		}
-	}
 
-	private static void GetMode()
-	{
-        Console.WriteLine("Choose a mode: easy, medium, or hard");
-        string mode = Console.ReadLine();
-		maxNumber = 0;
-		maxGuesses = 0;
-		guess = -1;
+		private static int GenerateRandomNumber()
+		{
+			Random random = new Random();
+			int numberToGuess = random.Next(0, maxNumber);
+			return numberToGuess;
+		}
 
-		if (mode.ContainsCaseInsensitive("easy"))
+		private static void SetMode()
 		{
-			maxNumber = 11;
-			maxGuesses = 3;
+			Console.WriteLine("Choose a mode: easy, medium, or hard");
+			string? mode;
+			int i = 0;
+			do
+			{
+				if (i > 0) Console.WriteLine("Can you please enter the mode again?");
+
+				mode = Console.ReadLine();
+				i++;
+			} while (!CheckEnteredModeIsCorrect(mode));
+
+			maxNumber = 0;
+			maxGuesses = 0;
+			guess = -1;
+
+			if (mode.IgnoreCaseContains("easy"))
+			{
+				maxNumber = 11;
+				maxGuesses = 3;
+			}
+			else if (mode.IgnoreCaseContains("medium"))
+			{
+				maxNumber = 31;
+				maxGuesses = 6;
+			}
+			else if (mode.IgnoreCaseContains("hard"))
+			{
+				maxNumber = 51;
+				maxGuesses = 8;
+			}
 		}
-		else if (mode.ContainsCaseInsensitive("medium"))
+
+		private static bool CheckEnteredModeIsCorrect(string mode)
 		{
-			maxNumber = 31;
-			maxGuesses = 6;
-		}
-		else if (mode.ContainsCaseInsensitive("hard"))
-		{
-			maxNumber = 51;
-			maxGuesses = 8;
+			if (mode == "")
+				return false;
+			if (!mode.IgnoreCaseContains("easy") && !mode.IgnoreCaseContains("medium") && !mode.IgnoreCaseContains("hard"))
+				return false;
+
+			return true;
 		}
 	}
 }
