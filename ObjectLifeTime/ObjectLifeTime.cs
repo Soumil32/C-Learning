@@ -6,6 +6,11 @@
         static void Main(string[] args)
         {
             Car myCar = new();
+            myCar.Make = "Toyota";
+            // ReSharper disable once StringLiteralTypo
+            myCar.Model = "Camery";
+            myCar.Year = 2019;
+            myCar.Colour = "Black";
         }
     }
 
