@@ -1,16 +1,15 @@
 ﻿namespace ObjectLifeTime
 {
-    class MainClass
+    internal static class MainClass
     {
         // ReSharper disable once ArrangeTypeMemberModifiers
+        // ReSharper disable once UnusedParameter.Local
         static void Main(string[] args)
         {
-            Car myCar = new();
-            myCar.Make = "Toyota";
             // ReSharper disable once StringLiteralTypo
-            myCar.Model = "Camery";
-            myCar.Year = 2019;
-            myCar.Colour = "Black";
+            Car myCar = new Car("Toyota", "Camery", 2019, "Black");
+
+            Console.WriteLine($"{myCar.Make} {myCar.Model} {myCar.Year} {myCar.Colour}");
         }
     }
 
@@ -20,5 +19,13 @@
         public string? Model { get; set; }
         public int? Year { get; set; }
         public string? Colour { get; set; }
+
+        public Car(string make, string model, int year, string colour)
+        {
+            Make = make;
+            Model = model;
+            Year = year;
+            Colour = colour;
+        }
     }
 }
