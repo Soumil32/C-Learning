@@ -23,14 +23,6 @@ namespace BenchmarkCode
             return new string(stringToReverseCharArray);
         }
         
-        public string ReverseStringWithStringConcat()
-        {
-            string stringToReverse = "I am going to wake up tonight not tomorrow";
-            char[] stringToReverseCharArray = stringToReverse.ToCharArray();
-            Array.Reverse(stringToReverseCharArray);
-            return String.Concat(stringToReverseCharArray);
-        }
-        
         [Benchmark]
         public string ReverseStringWithStringFormat()
         {
@@ -38,6 +30,15 @@ namespace BenchmarkCode
             char[] stringToReverseCharArray = stringToReverse.ToCharArray();
             Array.Reverse(stringToReverseCharArray);
             return string.Format($"{stringToReverseCharArray}");
+        }
+        
+        [Benchmark]
+        public string ReverseStringWithStringCreate()
+        {
+            string stringToReverse = "I am going to wake up tonight not tomorrow";
+            char[] stringToReverseCharArray = stringToReverse.ToCharArray();
+            Array.Reverse(stringToReverseCharArray);
+            return string.Create();
         }
     }
 }
