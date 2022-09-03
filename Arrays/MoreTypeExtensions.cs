@@ -1,18 +1,14 @@
 ﻿// ReSharper disable once CheckNamespace
+
 namespace MoreTypeExtensions
 {
     public static class StringExtensions
     {
-        static void Main()
-        {
-            Console.Write("This is working right?");
-        }
-		
         public static string ReverseString(this string stringToReverse)
         {
             char[] stringToReverseCharArray = stringToReverse.ToCharArray();
             Array.Reverse(stringToReverseCharArray);
-            return String.Concat(stringToReverseCharArray);
+            return new string(stringToReverseCharArray);
         }
 
         public static bool IgnoreCaseContains(this string source, string substring)
@@ -23,26 +19,23 @@ namespace MoreTypeExtensions
 
     public static class CharExtensions
     {
-        public static string ConvertToString(this char[] charToConvert)
-        {
-            return new string(charToConvert);
-        }
+        
     }
 
     public static class IntExtensions
     {
         public static int? FindDuplicate(this int[] arrayToFindDuplicateIn)
         {
-            int previousint = int.MaxValue;
+            int prevoiusInt = int.MaxValue;
             arrayToFindDuplicateIn = arrayToFindDuplicateIn.OrderByDescending(x => x).ToArray();
 
             foreach (int number in arrayToFindDuplicateIn)
             {
-                if (number == previousint)
+                if (number == prevoiusInt)
                 {
                     return number;
                 }
-                previousint = number;
+                prevoiusInt = number;
             }
             return null;
         }
