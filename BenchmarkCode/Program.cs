@@ -9,36 +9,25 @@ namespace BenchmarkCode
     [RankColumn]
     public class CodeToBenchmark
     {
+        List<int> intList = new List<int>() {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         static void Main()
         {
             var summary = BenchmarkRunner.Run<CodeToBenchmark>();
         }
 
         [Benchmark]
-        public string ReverseStringWithNewString()
+        public void ForEach()
         {
-            string stringToReverse = "I am going to wake up tonight not tomorrow";
-            char[] stringToReverseCharArray = stringToReverse.ToCharArray();
-            Array.Reverse(stringToReverseCharArray);
-            return new string(stringToReverseCharArray);
+            foreach (int integer in intList)
+            {
+                Console.WriteLine(integer);
+            }
         }
         
         [Benchmark]
-        public string ReverseStringWithStringFormat()
+        public void ForEachWithExtension()
         {
-            string stringToReverse = "I am going to wake up tonight not tomorrow";
-            char[] stringToReverseCharArray = stringToReverse.ToCharArray();
-            Array.Reverse(stringToReverseCharArray);
-            return string.Format($"{stringToReverseCharArray}");
-        }
-        
-        [Benchmark]
-        public string ReverseStringWithStringCreate()
-        {
-            string stringToReverse = "I am going to wake up tonight not tomorrow";
-            char[] stringToReverseCharArray = stringToReverse.ToCharArray();
-            Array.Reverse(stringToReverseCharArray);
-            return string.Create();
+            intList.ForEach(p => Console.WriteLine(p));
         }
     }
 }
