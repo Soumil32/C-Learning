@@ -15,21 +15,21 @@ using System.Windows.Shapes;
 
 namespace WPF_Events
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
-    {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+	/// <summary>
+	/// Interaction logic for MainWindow.xaml
+	/// </summary>
+	public partial class MainWindow : Window
+	{
+		public MainWindow()
+		{
+			InitializeComponent();
+		}
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            myLabel.Content = "Hello World";
-            myLabel.Height = -1000;
-            myLabel.Width = -10000;
-        }
-    }
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			myLabel.Content = "Hello World";
+			myLabel.Height = 1000;
+			myLabel.Width = 1000;
+		}
+	}
 }
